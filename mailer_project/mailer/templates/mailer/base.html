@@ -8,21 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body class="text-center">
-<!--    <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
-<!--    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>-->
-<!--    <label for="inputEmail" class="visually-hidden">Email address</label>-->
-<!--    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>-->
-<!--    <label for="inputPassword" class="visually-hidden">Password</label>-->
-<!--    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>-->
-<!--    <div class="checkbox mb-3">-->
-<!--      <label>-->
-<!--        <input type="checkbox" value="remember-me"> Remember me-->
-<!--      </label>-->
-<!--    </div>-->
-<!--    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>-->
+
     <main class="form-signin">
         <h1 class="h3 mb-3 fw-normal">SEND EMAIL WITH DJANGO</h1>
-            <form action="" method="post" id="form-mail">  {% csrf_token %}
+            <form enctype="multipart/form-data" action="" method="post" id="form-mail">  {% csrf_token %}
                 <div class="input-form" id="div-to">
                     <label for="mail-to" class="visually-hidden">To: </label><br>
                     <input type="email" name="to" class="form-control" id="mail-to" placeholder="Send to:" required autofocus>
@@ -33,12 +22,17 @@
                 </div>
                 <div class="input-form" id="div-message">
                     <label for="mail-message" class="visually-hidden">Message: </label><br>
-                    <textarea name="message" id="mail-message" class="form-control" form='form-mail' cols="18" rows="10" placeholder="Your message here..."></textarea>
+                    <textarea name="message" id="mail-message" class="form-control" form='form-mail' cols="18" rows="6" placeholder="Your message here..."></textarea>
+                </div>
+                <div class="input-form" id="div-file">
+                    <input type="file" class="form-control" name="file" id="file">
                 </div>
                 <div class="input-form" id="div-submit">
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Send</button>
                 </div>
+
             </form>
+        {{ message }}
     </main>
 </body>
 </html>
