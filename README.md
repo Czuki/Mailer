@@ -7,7 +7,9 @@ File attachments possible
 
 Visuals made with bootstrap
 
-![screenshot](https://user-images.githubusercontent.com/28755960/110161181-4eefed80-7ded-11eb-87a6-6e2eada4efa9.png)
-
 
 To use please edit Email settings in setting.py
+
+
+![screenshot](https://user-images.githubusercontent.com/28755960/110161181-4eefed80-7ded-11eb-87a6-6e2eada4efa9.png)
+
